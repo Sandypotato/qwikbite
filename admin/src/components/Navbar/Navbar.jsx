@@ -4,7 +4,7 @@ import { assets } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
 import { toast } from "react-toastify";
 import {useNavigate } from "react-router-dom";
-
+import logo from '../../assets/bite.svg'
 const Navbar = () => {
   const navigate=useNavigate();
   const {token, admin, setAdmin, setToken } = useContext(StoreContext);
@@ -18,7 +18,7 @@ const Navbar = () => {
   }
   return (
     <div className="navbar">
-      <img className="logo" src={assets.logo} alt="" />
+      <img className="logo" src={logo} alt="" />
       {token && admin ? (
         <p className="login-conditon" onClick={logout}>Logout</p>
       ) : (

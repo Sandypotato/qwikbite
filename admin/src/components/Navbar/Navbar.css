@@ -4,7 +4,7 @@
     align-items: center;
     padding: 8px 4%;
 }
-.navbar .logo{
+.navbar{
     width: max(10%,80px);
 }
 .navbar .profile{
@@ -12,4 +12,7 @@
 }
 .login-conditon{
     font-size: 20px;
+}
+.logo{
+    width: 15vw;
 }

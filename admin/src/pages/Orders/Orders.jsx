@@ -67,18 +67,8 @@ const Orders = ({ url }) => {
               <p className="order-item-name">
                 {order.address.firstName + " " + order.address.lastName}
               </p>
-              <div className="order-item-address">
-                <p>{order.address.street + ","}</p>
-                <p>
-                  {order.address.city +
-                    ", " +
-                    order.address.state +
-                    ", " +
-                    order.address.country +
-                    ", " +
-                    order.address.zipcode}
-                </p>
-              </div>
+              <p className="order-item-email">{order.address.email}</p>
+              <p className="order-item-class">{order.address.class}</p>
               <p className="order-item-phone">{order.address.phone}</p>
             </div>
             <p>Items: {order.items.length}</p>

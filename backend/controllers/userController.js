@@ -57,7 +57,8 @@ const registerUser = async (req, res) => {
 
     const salt = await bcrypt.genSalt(Number(process.env.SALT));
     const hashedPassword = await bcrypt.hash(password, salt);
-
+    
+    
     const newUser = new userModel({
       name: name,
       email: email,

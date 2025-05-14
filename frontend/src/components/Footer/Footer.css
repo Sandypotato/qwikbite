@@ -1,6 +1,6 @@
 .footer {
-  color: #d9d9d9;
-  background-color: #323232;
+  color: #ffffff;
+  background-color: #2f2f2f;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +15,7 @@
   grid-template-columns: 2fr 1fr 1fr;
   gap: 80px;
 }
+
 .footer-content-left,
 .footer-content-center,
 .footer-content-right {
@@ -48,6 +49,16 @@
     background-color: gray;
     border: none;
 }
+
+.logo-container{
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  gap: 20px;
+}
+.logo{
+  width: 50%;
+}
 @media (max-width:750px) {
   .footer-content{
     display: flex;
@@ -57,4 +68,9 @@
   .footer-copyright{
     text-align: center;
   }
+}
+.yay {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
 }

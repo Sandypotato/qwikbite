@@ -4,7 +4,7 @@ import { assets } from "../../assets/frontend_assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
 import { toast } from "react-toastify";
-
+import logo from "../../assets/frontend_assets/bite.svg";
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
@@ -19,7 +19,7 @@ const Navbar = ({ setShowLogin }) => {
   return (
     <div className="navbar">
       <Link to="/">
-        <img src={assets.logo} alt="" className="logo" />
+        <img src={logo} alt="" className="logo" />
       </Link>
       <ul className="navbar-menu">
         <Link
@@ -27,28 +27,35 @@ const Navbar = ({ setShowLogin }) => {
           onClick={() => setMenu("home")}
           className={menu === "home" ? "active" : ""}
         >
-          home
+          Home
+        </Link>
+        <Link
+          to="/myorders"
+          onClick={() => setMenu("myorders")}
+          className={menu === "myorders" ? "active" : ""}
+        >
+          My Orders
         </Link>
         <a
           href="#explore-menu"
           onClick={() => setMenu("menu")}
           className={menu === "menu" ? "active" : ""}
         >
-          menu
+          Menu
         </a>
-        <a
+        {/*<a
           href="#app-download"
           onClick={() => setMenu("mobile-app")}
           className={menu === "mobile-app" ? "active" : ""}
         >
-          mobile-app
-        </a>
+          Mobile-app
+        </a>*/}
         <a
           href="#footer"
           onClick={() => setMenu("contact-us")}
           className={menu === "contact-us" ? "active" : ""}
         >
-          contact us
+          Contact Us
         </a>
       </ul>
       <div className="navbar-right">
